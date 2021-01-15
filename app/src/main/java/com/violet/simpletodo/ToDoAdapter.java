@@ -38,13 +38,15 @@ class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
         return items.size();
     }
 
+    public void add(String toDoItem) {
+        items.add(toDoItem);
+    }
+
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView textView;
 
         public ViewHolder(View view) {
             super(view);
-            // Define click listener for the ViewHolder's View
-
             textView = view.findViewById(R.id.textView);
         }
 
